@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: backend-api
+  name: backend-api
+spec:
+  containers:
+    - image: backend-api:latest
+      name: backend-api
+      ports:
+        - containerPort: 8885
+      imagePullPolicy: IfNotPresent
+      env:
+        - name: SERVER_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: backend-api-config
+              key: SERVER_PORT
+        - name: BACKEND_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: backend-api-config
+              key: BACKEND_NAME
+  restartPolicy: Never
