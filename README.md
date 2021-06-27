@@ -55,7 +55,6 @@ This will stop and remove the outdated pod.
 2. Follow the steps in Part II.
 
 NOTE: If the frontend-service pod is running or already deployed. You need to update the frontend-service config as well and redeploy the frontend-service since the IP address of pods are changing everytime that it is redeployed in cluster
-Note: For the Repository of frontend-service please see: https://github.com/navyzil/frontend-service
-
+(For the Repository of frontend-service please see: https://github.com/navyzil/frontend-service)
 
     
